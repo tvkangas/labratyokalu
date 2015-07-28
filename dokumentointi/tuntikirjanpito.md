@@ -1,0 +1,1 @@
+28. heinäkuuta, 1,5 tuntia, GitHubiin tutustuminen, projektin aloitus
