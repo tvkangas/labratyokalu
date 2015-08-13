@@ -122,15 +122,6 @@ public class Ajastin {
     
     @Override
     public String toString() {
-        if (this.tunnit >= 10 && this.minuutit >= 10 && this.sekunnit >=10) {
-            return getTunnit() + ":" + getMinuutit() + ":" + getSekunnit();
-        } else if (this.tunnit < 10 && this.minuutit >=10 && this.sekunnit >= 10) {
-            return "0" + getTunnit() + ":" + getMinuutit() + ":" + getSekunnit();
-        } else if (this.tunnit < 10 && this.minuutit <10 && this.sekunnit >= 10) {
-            return "0" + getTunnit() + ":0" + getMinuutit() + ":" + getSekunnit();
-        } else if (this.tunnit < 10 && this.minuutit <10 && this.sekunnit < 10) {
-            return "0" + getTunnit() + ":0" + getMinuutit() + ":0" + getSekunnit();
-        }        
         return getTunnit() + ":" + getMinuutit() + ":" + getSekunnit();
     }
 }
