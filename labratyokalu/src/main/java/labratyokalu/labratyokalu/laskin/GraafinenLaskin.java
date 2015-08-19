@@ -4,6 +4,17 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// import statements
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+
+/**
+ * Luokka luo graafisen laskimen, joka hyödyntää laskin-oliota
+ */
+
 public class GraafinenLaskin implements Runnable {
 
     private JFrame frame;
@@ -21,13 +32,20 @@ public class GraafinenLaskin implements Runnable {
     public void run() {
         frame = new JFrame("Laskin");
         frame.setPreferredSize(new Dimension(300, 250));
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);
         this.keski.requestFocus();
     }
+    
+    /**
+     * Metodi luo halutut komponentit käyttöliittymään
+     *
+     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
+     *
+     */
 
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(4, 1);
@@ -42,6 +60,14 @@ public class GraafinenLaskin implements Runnable {
     public JFrame getFrame() {
         return frame;
     }
+    
+    /**
+     * Metodi luo kehykseen halutut toiminnot
+     *
+     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
+     * @param yla Tulostauluna käytetty tekstikenttä
+     * @param keski Syöttökenttänä käytetty tekstikenttä
+     */
 
     public void alustaNapit(Container container, JTextField yla, JTextField keski) {
 

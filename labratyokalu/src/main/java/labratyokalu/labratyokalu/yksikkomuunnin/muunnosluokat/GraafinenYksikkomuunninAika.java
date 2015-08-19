@@ -21,7 +21,7 @@ public class GraafinenYksikkomuunninAika implements Runnable {
     public void run() {
         frame = new JFrame("Aikamuunnin");
         frame.setPreferredSize(new Dimension(500, 550));
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
         frame.pack();

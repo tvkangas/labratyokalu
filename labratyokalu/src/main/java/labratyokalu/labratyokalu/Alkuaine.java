@@ -1,6 +1,17 @@
 
 package labratyokalu.labratyokalu;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo alkuaine-olioita
+ */
 public class Alkuaine {
     private int jarjestysluku;
     private String nimi;

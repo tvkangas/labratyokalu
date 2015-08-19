@@ -1,10 +1,20 @@
 
 package labratyokalu.labratyokalu.ajastin;
 
+import java.awt.Component;
+
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
 public class Ajastin {
-    int tunnit;
-    int minuutit;
-    int sekunnit;
+    private int tunnit;
+    private int minuutit;
+    private int sekunnit;
     
     public Ajastin () {
         this.tunnit = 0;
@@ -105,7 +115,7 @@ public class Ajastin {
                     this.tunnit--;
                 }                
             }
-        }        
+        }    
     }
     
     public void tulostaLopetus() {

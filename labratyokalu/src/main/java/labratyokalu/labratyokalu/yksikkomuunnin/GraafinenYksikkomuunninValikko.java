@@ -1,11 +1,11 @@
 
 package labratyokalu.labratyokalu.yksikkomuunnin;
 
+import labratyokalu.labratyokalu.yksikkomuunnin.yksikkomuuntimenPaavalikonKlikkauskuuntelijat.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import labratyokalu.labratyokalu.yksikkomuunnin.paavalikonKlikkauskuuntelijat.*;
 
 public class GraafinenYksikkomuunninValikko implements Runnable {
     
@@ -30,7 +30,7 @@ public class GraafinenYksikkomuunninValikko implements Runnable {
     public void run() {
         frame = new JFrame("Yksikkömuunnin");
         frame.setPreferredSize(new Dimension(550, 200));
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);        
@@ -43,7 +43,7 @@ public class GraafinenYksikkomuunninValikko implements Runnable {
     }
         
     private void alustaValintanappaimet(Container container) {
-        JPanel panel3 = new JPanel(new GridLayout(1, 6));
+        JPanel apupaneeli = new JPanel(new GridLayout(1, 6));
         JButton tilavuusNappain = new JButton("V");
         tilavuusNappain.addActionListener(new KlikkausKuuntelijaTilavuus(this.tilavuusValikko, tilavuusNappain));
         JButton tiheysNappain = new JButton("rho");
@@ -56,13 +56,13 @@ public class GraafinenYksikkomuunninValikko implements Runnable {
         lampotilaNappain.addActionListener(new KlikkausKuuntelijaLampotila(this.lampotilaValikko, lampotilaNappain));
         JButton aikaNappain = new JButton("t");
         aikaNappain.addActionListener(new KlikkausKuuntelijaAika(this.aikaValikko, aikaNappain));
-        panel3.add(tilavuusNappain);
-        panel3.add(tiheysNappain);
-        panel3.add(massaNappain);
-        panel3.add(paineNappain);
-        panel3.add(lampotilaNappain);
-        panel3.add(aikaNappain);
-        container.add(panel3);
+        apupaneeli.add(tilavuusNappain);
+        apupaneeli.add(tiheysNappain);
+        apupaneeli.add(massaNappain);
+        apupaneeli.add(paineNappain);
+        apupaneeli.add(lampotilaNappain);
+        apupaneeli.add(aikaNappain);
+        container.add(apupaneeli);
     }    
     
 }

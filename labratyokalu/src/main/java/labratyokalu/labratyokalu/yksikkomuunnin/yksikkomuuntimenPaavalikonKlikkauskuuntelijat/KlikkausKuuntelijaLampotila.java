@@ -1,5 +1,5 @@
 
-package labratyokalu.labratyokalu.yksikkomuunnin.paavalikonKlikkauskuuntelijat;
+package labratyokalu.labratyokalu.yksikkomuunnin.yksikkomuuntimenPaavalikonKlikkauskuuntelijat;
 
 import java.awt.event.*;
 import javax.swing.*;

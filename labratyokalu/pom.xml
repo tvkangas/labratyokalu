@@ -33,6 +33,21 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.1.4</version>
+                <configuration>
+                    <targetClasses>
+                        <param>labratyokalu.labratyokalu.laskin.Laskin</param>
+                        <param>labratyokalu.labratyokalu.yksikkomuunnin.Yksikkomuunnin</param>
+                        <param>labratyokalu.labratyokalu.ajastin.Ajastin</param>
+                        <param>labratyokalu.labratyokalu.muistiinpanot.Muistiinpano</param>
+                        <param>labratyokalu.labratyokalu.muistiinpanot.MuistiinpanoVarasto</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>labratyokalu.labratyokalu.ajastin.*</param>
+                        <param>labratyokalu.labratyokalu.yksikkomuunnin.*</param>
+                        <param>labratyokalu.labratyokalu.laskin.*</param>
+                        <param>labratyokalu.labratyokalu.muistiinpanot.*</param>
+                    </targetTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>

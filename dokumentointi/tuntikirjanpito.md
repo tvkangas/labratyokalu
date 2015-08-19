@@ -9,3 +9,6 @@
 11. elokuuta, 0,5 tuntia, yksikkömuuntimen testit
 12. elokuuta, 1,5 tuntia, yksikkömuuntimen jatkoa
 13. elokuuta, 2 tuntia, yksikkömuuntimen jatkoa, testejä, luokkakaavio, palautus
+16. elokuuta, 1 tunti, koodikatselmus, hieman jatkoa
+17. elokuuta, 3 tuntia, ajastimen kanssa puuhailua, muistiinpanojen aloitus
+18. elokuuta, 2,5 tuntia, muistiinpano-osuus valmiiksi, testit sille, JavaDoc:ien aloitus
