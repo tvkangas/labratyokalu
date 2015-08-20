@@ -6,6 +6,17 @@ import java.awt.event.*;
 import javax.swing.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
 
+// import statements
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+
+/**
+ * Luokka luo graafisen yksikkömuuntimen, joka koskee paineen yksikkömuunnoksia
+ */
+
 public class GraafinenYksikkomuunninPaine implements Runnable {
     
     private JFrame frame;

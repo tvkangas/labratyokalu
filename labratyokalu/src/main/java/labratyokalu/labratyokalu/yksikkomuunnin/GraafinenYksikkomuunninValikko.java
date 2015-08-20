@@ -7,6 +7,17 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// import statements
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+
+/**
+ * Luokka luo graafisen valikon, jossa voi valita halutun yksikkömuunninluokan
+ */
+
 public class GraafinenYksikkomuunninValikko implements Runnable {
     
     private JFrame frame;

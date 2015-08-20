@@ -15,7 +15,7 @@ public class Kayttoliittyma {
     
     public ArrayList<Alkuaine> alustaAlkuaineet() throws Exception {
         ArrayList<Alkuaine> apuLista = new ArrayList();
-        File tiedosto = new File("src/main/java/tiedostot/alkuaineet.txt");
+        File tiedosto = new File("src/main/java/labratyokalu/tiedostot/alkuaineet.txt");
         Scanner skanneri = new Scanner(tiedosto, "UTF-8");
         while (skanneri.hasNextLine()) {
             Scanner apu = new Scanner(skanneri.nextLine());

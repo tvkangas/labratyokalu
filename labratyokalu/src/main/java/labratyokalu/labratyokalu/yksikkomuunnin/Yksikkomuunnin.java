@@ -6,6 +6,19 @@ public class Yksikkomuunnin {
     double vakiotermi;
     String mista;
     String mihin;
+    
+    // import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo Yksikkömuunnin-olioita, joiden avulla voidaan suorittaa yksikkömuunnoksia sekä 
+ * kertoimilla että vakiotermein
+ */
 
     public Yksikkomuunnin(double k, double vk, String mista, String mihin) {
         this.kerroin = k;
@@ -13,6 +26,15 @@ public class Yksikkomuunnin {
         this.mista = mista;
         this.mihin = mihin;
     }
+    
+    /**
+ * Validates a chess move.
+ *
+ * Use {@link #doMove(int theFromFile, int theFromRank, int theToFile, int theToRank)} to move a piece.
+ *
+ * @param muunnettava metodi saa parametrin arvona muunnettava luvun
+ * @return       palauttaa muunnetun luvun     
+ */
 
     public double muunna(double muunnettava) {
         return muunnettava * this.kerroin + this.vakiotermi;

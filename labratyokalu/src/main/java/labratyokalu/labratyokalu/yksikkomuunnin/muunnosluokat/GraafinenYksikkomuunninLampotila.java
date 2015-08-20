@@ -6,6 +6,17 @@ import java.awt.event.*;
 import javax.swing.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
 
+// import statements
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+
+/**
+ * Luokka luo graafisen yksikkömuuntimen, joka koskee lämpötilan yksikkömuunnoksia
+ */
+
 public class GraafinenYksikkomuunninLampotila implements Runnable {
     
     private JFrame frame;
@@ -28,6 +39,13 @@ public class GraafinenYksikkomuunninLampotila implements Runnable {
         frame.setVisible(true); 
     }
     
+    /**
+     * Metodi luo halutut komponentit käyttöliittymään
+     *
+     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
+     *
+     */
+    
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(3, 1);
         container.setLayout(layout);
@@ -44,6 +62,7 @@ public class GraafinenYksikkomuunninLampotila implements Runnable {
         panelApu.add(oikea);
         c.add(panelApu);
     }
+
     
     private void alustaNaytot(Container container) {
         JPanel panel1 = new JPanel(new GridLayout(1, 2));

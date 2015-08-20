@@ -12,3 +12,4 @@
 16. elokuuta, 1 tunti, koodikatselmus, hieman jatkoa
 17. elokuuta, 3 tuntia, ajastimen kanssa puuhailua, muistiinpanojen aloitus
 18. elokuuta, 2,5 tuntia, muistiinpano-osuus valmiiksi, testit sille, JavaDoc:ien aloitus
+19. elokuuta, 1,5 tuntia, sekvenssikaavioita, muistiinpanojen tallennus ja luku tiedostoon

@@ -7,6 +7,18 @@ import java.util.*;
 import java.lang.Object.*;
 import labratyokalu.labratyokalu.muistiinpanot.*;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla päästään valikkoon, jotta voidaan tarkastella muistiinpanoja
+ */
+
 public class KlikkauskuuntelijaPaavalikkoTarkasteleMuistiinpanoja implements ActionListener {
     
     private GraafinenKayttoliittymaMuistiinpanojenTarkastelu tarkasteluvalikko;

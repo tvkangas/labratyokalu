@@ -4,6 +4,18 @@ package labratyokalu.labratyokalu.laskin;
 import java.awt.event.*;
 import javax.swing.*;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla voidaan tyhjentää
+ */
+
 public class KlikkausKuuntelijaTyhjenna implements ActionListener {
     
     private Laskin laskin;

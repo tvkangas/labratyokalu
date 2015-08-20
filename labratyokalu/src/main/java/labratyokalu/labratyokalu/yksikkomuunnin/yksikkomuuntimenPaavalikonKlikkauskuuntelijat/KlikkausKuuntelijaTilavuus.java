@@ -7,6 +7,18 @@ import java.util.*;
 import java.lang.Object.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.GraafinenYksikkomuunninTilavuus;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla päästään selaamaan tilavuuteen liittyviä yksikkömuuntimia
+ */
+
 public class KlikkausKuuntelijaTilavuus implements ActionListener {
     
     private GraafinenYksikkomuunninTilavuus yksikkomuunninValikko;

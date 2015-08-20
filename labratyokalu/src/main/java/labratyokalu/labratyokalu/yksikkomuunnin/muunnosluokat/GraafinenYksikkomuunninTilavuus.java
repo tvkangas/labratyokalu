@@ -27,7 +27,7 @@ public class GraafinenYksikkomuunninTilavuus implements Runnable {
         frame.pack();
         frame.setVisible(true); 
     }
-    
+
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(3, 1);
         container.setLayout(layout);

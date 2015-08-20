@@ -79,10 +79,8 @@ public class GraafinenKayttoliittymaMuistiinpanojenTarkastelu implements Runnabl
             JLabel mp = new JLabel(muistiinpanot.get(i).getJattopaiva() + " " + muistiinpanot.get(i).getMuistiinpano());
             JButton poistoNappi = new JButton("Poista");
             poistoNappi.addActionListener(new KlikkauskuuntelijaMuistiinpanonPoisto(muistiinpanot.get(i), this.muistiinpanoVarasto));
-            JButton muokkaaNappi = new JButton("Muokkaa");
             container.add(mp);
             container.add(poistoNappi);
-            container.add(muokkaaNappi);
         }
     }
 

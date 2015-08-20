@@ -6,6 +6,17 @@ import java.awt.event.*;
 import javax.swing.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
 
+// import statements
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+
+/**
+ * Luokka luo graafisen yksikkömuuntimen, joka koskee tiheyden yksikkömuunnoksia
+ */
+
 public class GraafinenYksikkomuunninTiheys implements Runnable {
     
     private JFrame frame;
@@ -35,6 +46,7 @@ public class GraafinenYksikkomuunninTiheys implements Runnable {
         alustaNaytot(container);        
         alustaMuuntoNappaimet(container);
     }
+
     
     private void alustaAputekstit(Container c) {
         JPanel panelApu = new JPanel(new GridLayout(1, 2));

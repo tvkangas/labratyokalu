@@ -6,6 +6,17 @@ import java.awt.event.*;
 import javax.swing.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
 
+// import statements
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+
+/**
+ * Luokka luo graafisen yksikkömuuntimen, joka koskee massan yksikkömuunnoksia
+ */
+
 public class GraafinenYksikkomuunninMassa implements Runnable {
     
     private JFrame frame;
@@ -27,7 +38,6 @@ public class GraafinenYksikkomuunninMassa implements Runnable {
         frame.pack();
         frame.setVisible(true); 
     }
-    
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(3, 1);
         container.setLayout(layout);
@@ -37,6 +47,7 @@ public class GraafinenYksikkomuunninMassa implements Runnable {
         alustaMuuntoNappaimet(container);
         
     }
+    
     
     private void alustaAputekstit(Container c) {
         JPanel panelApu = new JPanel(new GridLayout(1, 2));

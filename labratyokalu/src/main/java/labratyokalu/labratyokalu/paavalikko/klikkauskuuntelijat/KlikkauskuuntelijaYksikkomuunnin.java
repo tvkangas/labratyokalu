@@ -5,6 +5,18 @@ import java.awt.event.*;
 import javax.swing.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla päästään selaamaan yksikkömuunninta
+ */
+
 public class KlikkauskuuntelijaYksikkomuunnin implements ActionListener {
     private GraafinenYksikkomuunninValikko gYmValikko;
 

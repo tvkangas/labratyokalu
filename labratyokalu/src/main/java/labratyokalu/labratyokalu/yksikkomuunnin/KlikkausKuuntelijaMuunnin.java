@@ -5,6 +5,18 @@ import javax.swing.*;
 import java.util.*;
 import java.lang.Object.*;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla voidaan toteuttaa yksikkömuunnos
+ */
+
 public class KlikkausKuuntelijaMuunnin implements ActionListener {
 
     private Yksikkomuunnin yksikkomuunnin;

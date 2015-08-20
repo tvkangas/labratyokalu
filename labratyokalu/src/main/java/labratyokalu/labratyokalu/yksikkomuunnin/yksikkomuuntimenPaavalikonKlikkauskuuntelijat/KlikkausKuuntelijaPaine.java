@@ -7,6 +7,18 @@ import java.util.*;
 import java.lang.Object.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.GraafinenYksikkomuunninPaine;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla päästään selaamaan paineeseen liittyviä yksikkömuuntimia
+ */
+
 public class KlikkausKuuntelijaPaine implements ActionListener {
     
     private GraafinenYksikkomuunninPaine yksikkomuunninValikko;

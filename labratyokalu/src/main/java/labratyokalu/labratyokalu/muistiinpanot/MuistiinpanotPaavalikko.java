@@ -2,10 +2,24 @@
 package labratyokalu.labratyokalu.muistiinpanot;
 
 import labratyokalu.labratyokalu.muistiinpanot.*;
+import labratyokalu.labratyokalu.muistiinpanot.klikkauskuuntelijat.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import labratyokalu.labratyokalu.muistiinpanot.klikkauskuuntelijat.*;
+import java.io.*;
+import java.util.*;
+
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo pohjan, jossa voidaan selata eri vaihtoehtoja muistiinpanojen tekemisessä
+ */
 
 public class MuistiinpanotPaavalikko implements Runnable {
     
@@ -14,7 +28,7 @@ public class MuistiinpanotPaavalikko implements Runnable {
     private GraafinenKayttoliittymaMuistiinpanonLisays lisaysValikko;
     private GraafinenKayttoliittymaMuistiinpanojenTarkastelu tarkasteluValikko;    
     
-    public MuistiinpanotPaavalikko() {
+    public MuistiinpanotPaavalikko() throws Exception {
         this.muistiinpanoVarasto = luoMuistiinpanoVarasto();
         this.lisaysValikko = new GraafinenKayttoliittymaMuistiinpanonLisays(this.muistiinpanoVarasto);
         this.tarkasteluValikko = new GraafinenKayttoliittymaMuistiinpanojenTarkastelu(this.muistiinpanoVarasto);
@@ -30,11 +44,25 @@ public class MuistiinpanotPaavalikko implements Runnable {
         frame.setVisible(true);
     }
     
+    /**
+     * Metodi luo halutut komponentit käyttöliittymään
+     *
+     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
+     *
+     */
+    
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(1, 1);
         container.setLayout(layout);
         alustaValintanappaimet(container);
     }
+    
+    /**
+     * Piirrossa hyödynnetty metodi, joka luo halutut napit
+     *
+     * @param c Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat 
+     *
+     */
     
     public void alustaValintanappaimet(Container c) {
         JPanel panelApu = new JPanel(new GridLayout(2, 1));
@@ -49,8 +77,24 @@ public class MuistiinpanotPaavalikko implements Runnable {
         c.add(panelApu);
     }
     
-    public MuistiinpanoVarasto luoMuistiinpanoVarasto() {
+    /**
+     * Metodi, joka lukee tallennetut muistiinpanot
+     *
+     * @return apuVarasto joka palauttaa konstruktorille luetuista muistiinpanoista koostuvan listan
+     *
+     */
+    
+    public MuistiinpanoVarasto luoMuistiinpanoVarasto() throws Exception {
         MuistiinpanoVarasto apuVarasto = new MuistiinpanoVarasto();
+        File tiedosto = new File("src/main/java/labratyokalu/tiedostot/muistiinpanot.txt");
+        Scanner skanneri = new Scanner(tiedosto, "UTF-8");
+        while (skanneri.hasNextLine()) {
+            Scanner apu = new Scanner(skanneri.nextLine());
+            apu.useDelimiter(";");
+            String mp = apu.next();
+            String jattopaiva = apu.next();
+            apuVarasto.lisaaMuistiinpano(new Muistiinpano(mp, jattopaiva));
+        }
         return apuVarasto;
     }
     

@@ -6,6 +6,17 @@ import java.awt.event.*;
 import javax.swing.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
 
+// import statements
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+
+/**
+ * Luokka luo graafisen yksikkömuuntimen, joka koskee ajan yksikkömuunnoksia
+ */
+
 public class GraafinenYksikkomuunninAika implements Runnable {
     
     private JFrame frame;
@@ -28,6 +39,7 @@ public class GraafinenYksikkomuunninAika implements Runnable {
         frame.setVisible(true); 
     }
     
+
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(3, 1);
         container.setLayout(layout);
@@ -35,6 +47,7 @@ public class GraafinenYksikkomuunninAika implements Runnable {
         alustaNaytot(container);        
         alustaMuuntoNappaimet(container);
     }
+    
     
     private void alustaNaytot(Container container) {
         JPanel panel1 = new JPanel(new GridLayout(1, 2));

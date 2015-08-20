@@ -7,6 +7,18 @@ import java.util.*;
 import java.lang.Object.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.GraafinenYksikkomuunninAika;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla päästään selaamaan aikaan liittyviä yksikkömuuntimia
+ */
+
 public class KlikkausKuuntelijaAika implements ActionListener {
     
     private GraafinenYksikkomuunninAika yksikkomuunninValikko;

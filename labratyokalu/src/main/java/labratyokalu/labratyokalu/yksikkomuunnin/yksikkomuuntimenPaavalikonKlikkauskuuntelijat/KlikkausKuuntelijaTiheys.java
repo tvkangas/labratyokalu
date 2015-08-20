@@ -7,6 +7,18 @@ import java.util.*;
 import java.lang.Object.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.GraafinenYksikkomuunninTiheys;
 
+// import statements
+
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo ActionListener-olion, jolla päästään selaamaan tiheyteen liittyviä yksikkömuuntimia
+ */
+
 public class KlikkausKuuntelijaTiheys implements ActionListener {
     
     private GraafinenYksikkomuunninTiheys yksikkomuunninValikko;
