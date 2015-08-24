@@ -1,17 +1,10 @@
-package labratyokalu.labratyokalu;
-import java.io.*;
+
+package labratyokalu.labratyokalu.yhdisteet;
+import java.io.File;
 import java.util.*;
 
-public class Kayttoliittyma {
-    private ArrayList<Alkuaine> alkuaineet;
-    
-    public Kayttoliittyma() throws Exception {
-        this.alkuaineet = alustaAlkuaineet();
-    }
-    
-    public void kaynnista() {
-        tulostaAlkuaineetListana();
-    }
+
+public class AlkuaineidenLuku {
     
     public ArrayList<Alkuaine> alustaAlkuaineet() throws Exception {
         ArrayList<Alkuaine> apuLista = new ArrayList();
@@ -35,11 +28,4 @@ public class Kayttoliittyma {
         return apuLista;        
     }
     
-    public void tulostaAlkuaineetListana() {
-        for (int i = 0; i < this.alkuaineet.size(); i++) {
-            System.out.println(this.alkuaineet.get(i));
-        }
-    }
-    
 }
-

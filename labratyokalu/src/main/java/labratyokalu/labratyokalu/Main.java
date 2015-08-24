@@ -7,6 +7,7 @@ import javax.swing.SwingUtilities;
 import labratyokalu.labratyokalu.*;
 import labratyokalu.labratyokalu.muistiinpanot.*;
 import labratyokalu.labratyokalu.paavalikko.Paavalikko;
+import labratyokalu.labratyokalu.yhdisteet.*;
 
 public class Main {
 
@@ -14,6 +15,10 @@ public class Main {
         Paavalikko paavalikko = new Paavalikko();
         paavalikko.run();
         
+//        GraafinenMoolimassalaskuri gMlaskuri = new GraafinenMoolimassalaskuri();
+//        gMlaskuri.run();
+
+
     }
 
 }

@@ -13,3 +13,6 @@
 17. elokuuta, 3 tuntia, ajastimen kanssa puuhailua, muistiinpanojen aloitus
 18. elokuuta, 2,5 tuntia, muistiinpano-osuus valmiiksi, testit sille, JavaDoc:ien aloitus
 19. elokuuta, 1,5 tuntia, sekvenssikaavioita, muistiinpanojen tallennus ja luku tiedostoon
+20. elokuuta, 1 tunti, JavaDocien kirjoittamista
+21. elokuuta, 2 tuntia, moolimassalaskuri yhdisteille
+23. elokuuta, 1 tuni, graafinen moolimassalaskuri,

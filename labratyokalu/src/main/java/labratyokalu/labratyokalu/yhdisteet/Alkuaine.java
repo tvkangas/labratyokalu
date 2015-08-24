@@ -1,5 +1,5 @@
 
-package labratyokalu.labratyokalu;
+package labratyokalu.labratyokalu.yhdisteet;
 
 // import statements
 

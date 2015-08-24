@@ -40,12 +40,16 @@
                         <param>labratyokalu.labratyokalu.ajastin.Ajastin</param>
                         <param>labratyokalu.labratyokalu.muistiinpanot.Muistiinpano</param>
                         <param>labratyokalu.labratyokalu.muistiinpanot.MuistiinpanoVarasto</param>
+                        <param>labratyokalu.labratyokalu.yhdisteet.Alkuaine</param>
+                        <param>labratyokalu.labratyokalu.yhdisteet.Yhdiste</param>
+                        <param>labratyokalu.labratyokalu.yhdisteet.Moolimassalaskuri</param>
                     </targetClasses>
                     <targetTests>
                         <param>labratyokalu.labratyokalu.ajastin.*</param>
                         <param>labratyokalu.labratyokalu.yksikkomuunnin.*</param>
                         <param>labratyokalu.labratyokalu.laskin.*</param>
                         <param>labratyokalu.labratyokalu.muistiinpanot.*</param>
+                        <param>labratyokalu.labratyokalu.yhdisteet.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
