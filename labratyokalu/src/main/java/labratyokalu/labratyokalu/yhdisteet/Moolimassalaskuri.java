@@ -20,9 +20,25 @@ public class Moolimassalaskuri {
         this.yhdisteenAlkuaineet = alkuaineet;
     }
     
+    /**
+     * Metodi suoritta kertolaskun
+     *
+     *
+     * @param kerroin, kuinka monta kertaa ko massa pitää kertoa
+     * @param kerrottavaMassa, kerrottava massa
+     * @return tulo
+     */
+    
     public double suoritaKertolasku(int kerroin, double kerrottavaMassa) {
         return 1.0 * kerroin * kerrottavaMassa;
     }
+    
+    /**
+     * Metodi suoritta kertolaskun
+     *
+     *
+     * @return moolimassa
+     */
     
     public double palautaYhdisteenMassa() {
         double moolimassa = 0;

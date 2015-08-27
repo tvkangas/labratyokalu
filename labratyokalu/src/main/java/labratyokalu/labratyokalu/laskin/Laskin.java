@@ -8,11 +8,9 @@ import java.text.*;
  * @version 1.0
  * @since 2015-08-18
  */
-
 /**
  * Luokka luo laskin-olioita, joille on erilaisia toiminnallisuuksia
  */
-
 public class Laskin {
 
     private double arvo;
@@ -44,47 +42,44 @@ public class Laskin {
     public void vahenna(double vahennettava) {
         this.arvo -= vahennettava;
     }
-    
+
     /**
      * Metodi kertoo attribuutin arvon annetun parametrin arvolla
      *
      * @param kertoja Käyttäjän antama kertoja
      *
      */
-
     public void kerro(double kertoja) {
         this.arvo = this.arvo * kertoja;
     }
-    
+
     /**
      * Metodi jakaa attribuutin arvon annetulla parametrin arvolla
      *
      * @param jakaja Käyttäjän antama jakaja
      *
      */
-
     public void jaa(double jakaja) {
         this.arvo = this.arvo / jakaja;
     }
-    
+
     /**
      * Metodi korottaa attribuutin arvon annettuun potenssiin
      *
      * @param potenssi Käyttäjän antama potenssi
      *
      */
-
     public void korotaPotenssiin(double potenssi) {
         this.arvo = Math.pow(this.arvo, potenssi);
     }
-    
+
     /**
      * Metodin avulla voidaan pyöristää luku
      *
-     * @param monella Käyttäjän antama luku, jonka tarkkuudella pyöristys tapahtuu
+     * @param monella Käyttäjän antama luku, jonka tarkkuudella pyöristys
+     * tapahtuu
      *
      */
-
     public void pyorista(int monella) {
         String arvoApu = "1";
         for (int i = 0; i < monella; i++) {
@@ -104,12 +99,11 @@ public class Laskin {
     public double getArvo() {
         return this.arvo;
     }
-    
+
     /**
      * Metodi nollaa attribuutin arvon
      *
      */
-
     public void nollaa() {
         this.arvo = 0;
     }

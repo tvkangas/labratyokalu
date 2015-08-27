@@ -14,6 +14,7 @@ import labratyokalu.labratyokalu.laskin.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
 import labratyokalu.labratyokalu.yhdisteet.Alkuaine;
 import labratyokalu.labratyokalu.yhdisteet.GraafinenMoolimassalaskuri;
+import labratyokalu.labratyokalu.ajastin.*;
 
 // import statements
 /**
@@ -33,6 +34,7 @@ public class Paavalikko implements Runnable {
     private GraafinenYksikkomuunninValikko gYmValikko;
     private ArrayList<Alkuaine> alkuaineet;
     private GraafinenMoolimassalaskuri gMoolimassalaskuri;
+    private AjastimenValikko ajastimenValikko;
 
     public Paavalikko() {
         try {
@@ -48,6 +50,7 @@ public class Paavalikko implements Runnable {
             Logger.getLogger(Paavalikko.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.gMoolimassalaskuri = new GraafinenMoolimassalaskuri();
+        this.ajastimenValikko = new AjastimenValikko();
     }
     
     @Override
@@ -81,7 +84,7 @@ public class Paavalikko implements Runnable {
      */
     
     public void alustaValikkonappaimet(Container container) {
-        JPanel apupaneeli = new JPanel(new GridLayout(4, 1));
+        JPanel apupaneeli = new JPanel(new GridLayout(5, 1));
         JButton mpNappain = new JButton("Muistiinpanot");
         mpNappain.addActionListener(new KlikkauskuuntelijaMuistiinpanot(muistiinpanotPaavalikko));
         JButton laskinNappain = new JButton("Laskin");
@@ -90,11 +93,14 @@ public class Paavalikko implements Runnable {
         yksikkomuunninNappain.addActionListener(new KlikkauskuuntelijaYksikkomuunnin(this.gYmValikko));
         JButton moolimassalaskuriNappain = new JButton("Moolimassalaskuri");
         moolimassalaskuriNappain.addActionListener(new KlikkauskuuntelijaMoolimassalaskuri(this.gMoolimassalaskuri));
+        JButton ajastinNappain = new JButton("Ajastin");
+        ajastinNappain.addActionListener(new KlikkauskuuntelijaAjastin(this.ajastimenValikko));
         
         apupaneeli.add(mpNappain);
         apupaneeli.add(laskinNappain);
         apupaneeli.add(yksikkomuunninNappain);
         apupaneeli.add(moolimassalaskuriNappain);
+        apupaneeli.add(ajastinNappain);
         container.add(apupaneeli);
     }
     

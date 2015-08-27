@@ -3,6 +3,16 @@ package labratyokalu.labratyokalu.yhdisteet;
 import java.io.File;
 import java.util.*;
 
+/**
+ * @author      Tuukka Kangas 
+ * @version     1.0                 
+ * @since       2015-08-18          
+ */
+
+/**
+ * Luokka luo olion, jolla voidaan lukea alkuaineet tiedostosta
+ */
+
 
 public class AlkuaineidenLuku {
     

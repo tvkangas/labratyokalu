@@ -8,7 +8,6 @@ import javax.swing.*;
 import labratyokalu.labratyokalu.muistiinpanot.*;
 import labratyokalu.labratyokalu.muistiinpanot.MuistiinpanoVarasto;
 
-// import statements
 
 /**
  * @author      Tuukka Kangas 

@@ -15,4 +15,8 @@
 19. elokuuta, 1,5 tuntia, sekvenssikaavioita, muistiinpanojen tallennus ja luku tiedostoon
 20. elokuuta, 1 tunti, JavaDocien kirjoittamista
 21. elokuuta, 2 tuntia, moolimassalaskuri yhdisteille
-23. elokuuta, 1 tuni, graafinen moolimassalaskuri,
+23. elokuuta, 1 tunti, graafinen moolimassalaskuri
+24. elokuuta, 1 tunti, ajastin
+25. elokuuta, 2 tuntia, ajastin
+26. elokuuta, 1 tunti, ajastin
+27. elokuuta, 2 tuntia, ajastin + testejä

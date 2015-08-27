@@ -46,4 +46,10 @@ public class YhdisteTest {
         assertEquals(null, yhd.tunnistaAlkuaine("TääEiOoAlkuaine"));
     }
     
+    @Test
+    public void samaAlkuaineMonesti() {
+        Yhdiste y = new Yhdiste("C2H3C5");
+        assertEquals(87.101, y.getMoolimassa(), 0.0001);
+    }
+    
 }
