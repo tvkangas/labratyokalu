@@ -76,19 +76,19 @@ public class GraafinenYksikkomuunninLampotila implements Runnable {
         JPanel panel2 = new JPanel(new GridLayout(2, 2));        
         
         JButton celToFahNappi = new JButton ("C >> F");
-        celToFahNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.8, 32, "C", "F"), this.vasen, this.oikea, celToFahNappi));
+        celToFahNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.8, 32, "C", "F"), this.vasen, this.oikea));
         panel2.add(celToFahNappi);      
       
         JButton fahToCelNappi = new JButton ("F >> C");
-        fahToCelNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/1.8), (-32.0 / 1.8), "F", "C"), this.vasen, this.oikea, fahToCelNappi));
+        fahToCelNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/1.8), (-32.0 / 1.8), "F", "C"), this.vasen, this.oikea));
         panel2.add(fahToCelNappi);
         
         JButton celToKNappi = new JButton ("C >> K");
-        celToKNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, 273.15, "C", "K"), this.vasen, this.oikea, celToKNappi));
+        celToKNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, 273.15, "C", "K"), this.vasen, this.oikea));
         panel2.add(celToKNappi); 
         
         JButton kToCelNappi = new JButton ("C >> K");
-        kToCelNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, -273.15, "C", "K"), this.vasen, this.oikea, kToCelNappi));
+        kToCelNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, -273.15, "C", "K"), this.vasen, this.oikea));
         panel2.add(kToCelNappi); 
         
         c.add(panel2);

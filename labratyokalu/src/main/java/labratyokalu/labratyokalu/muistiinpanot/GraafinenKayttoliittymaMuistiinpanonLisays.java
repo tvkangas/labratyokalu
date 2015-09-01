@@ -56,7 +56,7 @@ public class GraafinenKayttoliittymaMuistiinpanonLisays implements Runnable {
         JTextField muistiinpanoKentta = new JTextField();
 
         JButton tallennusNappi = new JButton("Lisää muistiinpano");
-        tallennusNappi.addActionListener(new KlikkauskuuntelijaMuistiinpanonLisays(this.muistiinpanoVarasto, paivamaaraKentta, muistiinpanoKentta));
+        tallennusNappi.addActionListener(new KlikkauskuuntelijaMuistiinpanonLisays(this.muistiinpanoVarasto, paivamaaraKentta, muistiinpanoKentta, this.frame));
 
         container.add(paivamaaraTeksti);
         container.add(paivamaaraKentta);

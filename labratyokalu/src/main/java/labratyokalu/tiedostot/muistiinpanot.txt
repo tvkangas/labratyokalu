@@ -1,1 +1,2 @@
-Tämä on testi; 19.08.2015
+Tämä on testi;01.09.2015
+Skandit toimii åäöÅÖÄ;01.09.2015

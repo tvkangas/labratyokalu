@@ -56,17 +56,17 @@ public class GraafinenYksikkomuunninValikko implements Runnable {
     private void alustaValintanappaimet(Container container) {
         JPanel apupaneeli = new JPanel(new GridLayout(1, 6));
         JButton tilavuusNappain = new JButton("V");
-        tilavuusNappain.addActionListener(new KlikkausKuuntelijaTilavuus(this.tilavuusValikko, tilavuusNappain));
+        tilavuusNappain.addActionListener(new KlikkausKuuntelijaTilavuus(this.tilavuusValikko));
         JButton tiheysNappain = new JButton("rho");
-        tiheysNappain.addActionListener(new KlikkausKuuntelijaTiheys(this.tiheysValikko, tiheysNappain));
+        tiheysNappain.addActionListener(new KlikkausKuuntelijaTiheys(this.tiheysValikko));
         JButton massaNappain = new JButton("m");
-        massaNappain.addActionListener(new KlikkausKuuntelijaMassa(this.massaValikko, massaNappain));
+        massaNappain.addActionListener(new KlikkausKuuntelijaMassa(this.massaValikko));
         JButton paineNappain = new JButton("p");
-        paineNappain.addActionListener(new KlikkausKuuntelijaPaine(this.paineValikko, paineNappain));
+        paineNappain.addActionListener(new KlikkausKuuntelijaPaine(this.paineValikko));
         JButton lampotilaNappain = new JButton("T");
-        lampotilaNappain.addActionListener(new KlikkausKuuntelijaLampotila(this.lampotilaValikko, lampotilaNappain));
+        lampotilaNappain.addActionListener(new KlikkausKuuntelijaLampotila(this.lampotilaValikko));
         JButton aikaNappain = new JButton("t");
-        aikaNappain.addActionListener(new KlikkausKuuntelijaAika(this.aikaValikko, aikaNappain));
+        aikaNappain.addActionListener(new KlikkausKuuntelijaAika(this.aikaValikko));
         apupaneeli.add(tilavuusNappain);
         apupaneeli.add(tiheysNappain);
         apupaneeli.add(massaNappain);

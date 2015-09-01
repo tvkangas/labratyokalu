@@ -20,3 +20,4 @@
 25. elokuuta, 2 tuntia, ajastin
 26. elokuuta, 1 tunti, ajastin
 27. elokuuta, 2 tuntia, ajastin + testejä
+1. syyskuuta, 2,5 tuntia, kiehumispistelaskuri + dokumentaatiota

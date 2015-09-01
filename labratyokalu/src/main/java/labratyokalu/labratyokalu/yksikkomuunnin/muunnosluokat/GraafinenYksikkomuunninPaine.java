@@ -69,11 +69,11 @@ public class GraafinenYksikkomuunninPaine implements Runnable {
         JPanel panel2 = new JPanel(new GridLayout(1, 2));        
         
         JButton barToPsiNappi = new JButton ("bar >> psi");
-        barToPsiNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(14.5037738, 0, "bar", "psi"), this.vasen, this.oikea, barToPsiNappi));
+        barToPsiNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(14.5037738, 0, "bar", "psi"), this.vasen, this.oikea));
         panel2.add(barToPsiNappi);      
       
         JButton psiToBarNappi = new JButton ("min >> sek");
-        psiToBarNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/14.5037738), 0, "psi", "bar"), this.vasen, this.oikea, psiToBarNappi));
+        psiToBarNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/14.5037738), 0, "psi", "bar"), this.vasen, this.oikea));
         panel2.add(psiToBarNappi);
         
         c.add(panel2);

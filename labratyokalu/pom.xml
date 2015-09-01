@@ -43,6 +43,7 @@
                         <param>labratyokalu.labratyokalu.yhdisteet.Alkuaine</param>
                         <param>labratyokalu.labratyokalu.yhdisteet.Yhdiste</param>
                         <param>labratyokalu.labratyokalu.yhdisteet.Moolimassalaskuri</param>
+                        <param>labratyokalu.labratyokalu.kiehumispistelaskuri.Kiehumispistelaskuri</param>
                     </targetClasses>
                     <targetTests>
                         <param>labratyokalu.labratyokalu.ajastin.*</param>
@@ -50,6 +51,7 @@
                         <param>labratyokalu.labratyokalu.laskin.*</param>
                         <param>labratyokalu.labratyokalu.muistiinpanot.*</param>
                         <param>labratyokalu.labratyokalu.yhdisteet.*</param>
+                        <param>labratyokalu.labratyokalu.kiehumispistelaskuri.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

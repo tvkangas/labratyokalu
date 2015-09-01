@@ -69,19 +69,19 @@ public class GraafinenYksikkomuunninTiheys implements Runnable {
         JPanel panel2 = new JPanel(new GridLayout(2, 2));        
         
         JButton kgM3ToMgLNappi = new JButton ("kg/m3 >> mg/l");
-        kgM3ToMgLNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1000, 0, "kg/m3", "mg/l"), this.vasen, this.oikea, kgM3ToMgLNappi));
+        kgM3ToMgLNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1000, 0, "kg/m3", "mg/l"), this.vasen, this.oikea));
         panel2.add(kgM3ToMgLNappi);      
       
         JButton mgLToKgM3Nappi = new JButton ("mg/l >> kg/m3");
-        mgLToKgM3Nappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/1000.0), 0, "mg/l", "kg/m3"), this.vasen, this.oikea, mgLToKgM3Nappi));
+        mgLToKgM3Nappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/1000.0), 0, "mg/l", "kg/m3"), this.vasen, this.oikea));
         panel2.add(mgLToKgM3Nappi);
         
         JButton gLToKgM3Nappi = new JButton ("g/l >> kg/m3");
-        gLToKgM3Nappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, 0, "g/l", "kg/m3"), this.vasen, this.oikea, gLToKgM3Nappi));
+        gLToKgM3Nappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, 0, "g/l", "kg/m3"), this.vasen, this.oikea));
         panel2.add(gLToKgM3Nappi); 
         
         JButton kgM3ToGLNappi = new JButton ("kg/m3 >> g/l");
-        kgM3ToGLNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, 0, "kg/m3", "g/l"), this.vasen, this.oikea, kgM3ToGLNappi));
+        kgM3ToGLNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0, 0, "kg/m3", "g/l"), this.vasen, this.oikea));
         panel2.add(kgM3ToGLNappi); 
         
         c.add(panel2);

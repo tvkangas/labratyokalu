@@ -70,11 +70,11 @@ public class GraafinenYksikkomuunninMassa implements Runnable {
         JPanel panel2 = new JPanel(new GridLayout(1, 2));        
         
         JButton kgTolbNappi = new JButton ("kg >> lb");
-        kgTolbNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(2.2046, 0, "kg", "lb"), this.vasen, this.oikea, kgTolbNappi));
+        kgTolbNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(2.2046, 0, "kg", "lb"), this.vasen, this.oikea));
         panel2.add(kgTolbNappi);      
       
         JButton lbToKgNappi = new JButton ("lb >> kg");
-        lbToKgNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/2.2046), 0, "lb", "kg"), this.vasen, this.oikea, lbToKgNappi));
+        lbToKgNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin((1.0/2.2046), 0, "lb", "kg"), this.vasen, this.oikea));
         panel2.add(lbToKgNappi);
         
         c.add(panel2);

@@ -22,11 +22,9 @@ import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.GraafinenYksikkomu
 public class KlikkausKuuntelijaLampotila implements ActionListener {
     
     private GraafinenYksikkomuunninLampotila yksikkomuunninValikko;
-    private JButton nappi;
     
-    public KlikkausKuuntelijaLampotila(GraafinenYksikkomuunninLampotila yksikkomuunninValikko, JButton nappi) {
+    public KlikkausKuuntelijaLampotila(GraafinenYksikkomuunninLampotila yksikkomuunninValikko) {
         this.yksikkomuunninValikko = yksikkomuunninValikko;
-        this.nappi = nappi;
     }
     
     @Override

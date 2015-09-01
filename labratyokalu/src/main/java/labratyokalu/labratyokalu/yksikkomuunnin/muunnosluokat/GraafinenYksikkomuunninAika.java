@@ -70,11 +70,11 @@ public class GraafinenYksikkomuunninAika implements Runnable {
         JPanel panel2 = new JPanel(new GridLayout(1, 2));        
         
         JButton sekToMinNappi = new JButton ("s >> min");
-        sekToMinNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0 / 60.0, 0, "s", "min"), this.vasen, this.oikea, sekToMinNappi));
+        sekToMinNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1.0 / 60.0, 0, "s", "min"), this.vasen, this.oikea));
         panel2.add(sekToMinNappi);      
       
         JButton minToSekNappi = new JButton ("min >> sek");
-        minToSekNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(60, 0, "min", "sek"), this.vasen, this.oikea, minToSekNappi));
+        minToSekNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(60, 0, "min", "sek"), this.vasen, this.oikea));
         panel2.add(minToSekNappi);
         
         c.add(panel2);

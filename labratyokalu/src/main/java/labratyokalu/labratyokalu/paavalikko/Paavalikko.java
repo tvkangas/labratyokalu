@@ -2,8 +2,6 @@
 package labratyokalu.labratyokalu.paavalikko;
 
 import java.awt.*;
-import java.awt.event.*;
-import java.io.File;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,6 +13,7 @@ import labratyokalu.labratyokalu.yksikkomuunnin.*;
 import labratyokalu.labratyokalu.yhdisteet.Alkuaine;
 import labratyokalu.labratyokalu.yhdisteet.GraafinenMoolimassalaskuri;
 import labratyokalu.labratyokalu.ajastin.*;
+import labratyokalu.labratyokalu.kiehumispistelaskuri.GraafinenKiehumispistelaskuri;
 
 // import statements
 /**
@@ -30,27 +29,13 @@ import labratyokalu.labratyokalu.ajastin.*;
 public class Paavalikko implements Runnable {
     private JFrame frame;
     private MuistiinpanotPaavalikko muistiinpanotPaavalikko;
-    private GraafinenLaskin gLaskin;
-    private GraafinenYksikkomuunninValikko gYmValikko;
-    private ArrayList<Alkuaine> alkuaineet;
-    private GraafinenMoolimassalaskuri gMoolimassalaskuri;
-    private AjastimenValikko ajastimenValikko;
 
     public Paavalikko() {
         try {
             this.muistiinpanotPaavalikko = new MuistiinpanotPaavalikko();
         } catch (Exception ex) {
             Logger.getLogger(Paavalikko.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.gLaskin = new GraafinenLaskin();
-        this.gYmValikko = new GraafinenYksikkomuunninValikko();        
-        try {
-            this.alkuaineet = alustaAlkuaineet();
-        } catch (Exception ex) {
-            Logger.getLogger(Paavalikko.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.gMoolimassalaskuri = new GraafinenMoolimassalaskuri();
-        this.ajastimenValikko = new AjastimenValikko();
+        }   
     }
     
     @Override
@@ -70,7 +55,7 @@ public class Paavalikko implements Runnable {
      *
      */
     
-    public void luoKomponentit(Container container) {
+    private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(1, 1);
         container.setLayout(layout);
         alustaValikkonappaimet(container);
@@ -83,47 +68,28 @@ public class Paavalikko implements Runnable {
      *
      */
     
-    public void alustaValikkonappaimet(Container container) {
-        JPanel apupaneeli = new JPanel(new GridLayout(5, 1));
+    private void alustaValikkonappaimet(Container container) {
+        JPanel apupaneeli = new JPanel(new GridLayout(6, 1));
         JButton mpNappain = new JButton("Muistiinpanot");
         mpNappain.addActionListener(new KlikkauskuuntelijaMuistiinpanot(muistiinpanotPaavalikko));
         JButton laskinNappain = new JButton("Laskin");
-        laskinNappain.addActionListener(new KlikkauskuuntelijaLaskin(gLaskin));
+        laskinNappain.addActionListener(new KlikkauskuuntelijaLaskin(new GraafinenLaskin()));
         JButton yksikkomuunninNappain = new JButton("Yksikkömuunnin");
-        yksikkomuunninNappain.addActionListener(new KlikkauskuuntelijaYksikkomuunnin(this.gYmValikko));
+        yksikkomuunninNappain.addActionListener(new KlikkauskuuntelijaYksikkomuunnin(new GraafinenYksikkomuunninValikko()));
         JButton moolimassalaskuriNappain = new JButton("Moolimassalaskuri");
-        moolimassalaskuriNappain.addActionListener(new KlikkauskuuntelijaMoolimassalaskuri(this.gMoolimassalaskuri));
+        moolimassalaskuriNappain.addActionListener(new KlikkauskuuntelijaMoolimassalaskuri(new GraafinenMoolimassalaskuri()));
         JButton ajastinNappain = new JButton("Ajastin");
-        ajastinNappain.addActionListener(new KlikkauskuuntelijaAjastin(this.ajastimenValikko));
+        ajastinNappain.addActionListener(new KlikkauskuuntelijaAjastin(new AjastimenValikko()));
+        JButton kiehumispisteNappain = new JButton("Kiehumispistelaskuri");
+        kiehumispisteNappain.addActionListener(new KlikkauskuuntelijaKiehumispistelaskuri(new GraafinenKiehumispistelaskuri()));
         
         apupaneeli.add(mpNappain);
         apupaneeli.add(laskinNappain);
         apupaneeli.add(yksikkomuunninNappain);
         apupaneeli.add(moolimassalaskuriNappain);
         apupaneeli.add(ajastinNappain);
+        apupaneeli.add(kiehumispisteNappain);
         container.add(apupaneeli);
-    }
-    
-    public ArrayList<Alkuaine> alustaAlkuaineet() throws Exception {
-        ArrayList<Alkuaine> apuLista = new ArrayList();
-        File tiedosto = new File("src/main/java/labratyokalu/tiedostot/alkuaineet.txt");
-        Scanner skanneri = new Scanner(tiedosto, "UTF-8");
-        while (skanneri.hasNextLine()) {
-            Scanner apu = new Scanner(skanneri.nextLine());
-            apu.useDelimiter(";");
-            int jarjluku = Integer.parseInt(apu.next());
-            String nimi = apu.next();
-            if (nimi.equals("Rontgenium")) {
-                nimi = "Röntgenium";
-            }
-            String lyhenne = apu.next();
-            double massa = Double.parseDouble(apu.next());
-            double tiheys = Double.parseDouble(apu.next());
-            apuLista.add(new Alkuaine(jarjluku, nimi, lyhenne, massa, tiheys));
-        }
-        skanneri.close();
-        
-        return apuLista;        
     }
     
 }

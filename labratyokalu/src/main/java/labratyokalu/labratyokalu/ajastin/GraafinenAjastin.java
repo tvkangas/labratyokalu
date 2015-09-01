@@ -36,7 +36,7 @@ public class GraafinenAjastin implements Runnable {
         frame = new JFrame();
         frame.setPreferredSize(new Dimension(530, 300));
 
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
         lueAjastin();

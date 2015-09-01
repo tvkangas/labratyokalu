@@ -22,11 +22,9 @@ import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.GraafinenYksikkomu
 public class KlikkausKuuntelijaAika implements ActionListener {
     
     private GraafinenYksikkomuunninAika yksikkomuunninValikko;
-    private JButton nappi;
     
-    public KlikkausKuuntelijaAika(GraafinenYksikkomuunninAika yksikkomuunninValikko, JButton nappi) {
+    public KlikkausKuuntelijaAika(GraafinenYksikkomuunninAika yksikkomuunninValikko) {
         this.yksikkomuunninValikko = yksikkomuunninValikko;
-        this.nappi = nappi;
     }
     
     @Override

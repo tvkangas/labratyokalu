@@ -13,7 +13,6 @@ import java.util.*;
  * Luokka luo olion, jolla voidaan lukea alkuaineet tiedostosta
  */
 
-
 public class AlkuaineidenLuku {
     
     public ArrayList<Alkuaine> alustaAlkuaineet() throws Exception {

@@ -1,0 +1,1 @@
+Käyttöliittymää on kokeiltu erilaisin syöttein. Suurempia ongelmia ei ilmennyt graafista käyttöliittymää kokeiltaessa.

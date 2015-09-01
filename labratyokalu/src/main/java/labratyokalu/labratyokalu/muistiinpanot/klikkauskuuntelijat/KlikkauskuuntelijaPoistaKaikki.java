@@ -23,9 +23,11 @@ import labratyokalu.labratyokalu.muistiinpanot.*;
 public class KlikkauskuuntelijaPoistaKaikki implements ActionListener {
     
     private MuistiinpanoVarasto muistiinpanoVarasto;
+    private JFrame frame;
 
-    public KlikkauskuuntelijaPoistaKaikki(MuistiinpanoVarasto muistiinpanoVarasto) {
+    public KlikkauskuuntelijaPoistaKaikki(MuistiinpanoVarasto muistiinpanoVarasto, JFrame frame) {
         this.muistiinpanoVarasto = muistiinpanoVarasto;
+        this.frame = frame;
     }
 
     
@@ -37,6 +39,7 @@ public class KlikkauskuuntelijaPoistaKaikki implements ActionListener {
         } catch (Exception ex) {
             Logger.getLogger(KlikkauskuuntelijaMuistiinpanonLisays.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.frame.dispose();
     }
     
     /**

@@ -56,7 +56,7 @@ public class GraafinenKayttoliittymaMuistiinpanojenTarkastelu implements Runnabl
             tuoMuistiinpanot(container, this.muistiinpanoVarasto.palautaMuistiinpanotListana());
 
             JButton poistaKaikki = new JButton("Poista kaikki");
-            poistaKaikki.addActionListener(new KlikkauskuuntelijaPoistaKaikki(this.muistiinpanoVarasto));
+            poistaKaikki.addActionListener(new KlikkauskuuntelijaPoistaKaikki(this.muistiinpanoVarasto, this.frame));
             container.add(poistaKaikki);
         } else {
             GridLayout layout = new GridLayout(1, 1);

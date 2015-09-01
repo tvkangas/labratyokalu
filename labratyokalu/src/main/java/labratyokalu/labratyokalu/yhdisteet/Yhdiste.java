@@ -6,15 +6,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @author      Tuukka Kangas 
- * @version     1.0                 
- * @since       2015-08-27         
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-27
  */
-
 /**
  * Luokka luo yhdiste-olioita
  */
-
 public class Yhdiste {
 
     private HashMap<Alkuaine, Integer> yhdisteenAlkuaineet;
@@ -33,39 +31,41 @@ public class Yhdiste {
         lueYhdisteenAlkuaineetJaKertoimet();
         laskeMoolimassa();
     }
-    
+
     /**
      * Metodi yhdisteen alkuaineiden luvun. Metodin sisällä luetaan käyttäjän
      * antama merkkijono merkki kerrallaan läpi.
      */
-    
     public void lueYhdisteenAlkuaineetJaKertoimet() {
         String apu = "";
-        for (int i = 0; i < this.yhdisteenNimi.length(); i++) {
-            if (onkoMerkkiKirjain(this.yhdisteenNimi.charAt(i))) {                
-                apu += this.yhdisteenNimi.charAt(i);
-            } else if (onkoMerkkiNumero(this.yhdisteenNimi.charAt(i))) {
-                int kerroin = palautaKerroin(i);
-                if (kuinkaMontaMerkkiaLuvussa(kerroin) > 1) {
-                    i += kuinkaMontaMerkkiaLuvussa(kerroin)-1;
+        if (!onkoEnsimmainenMerkkiNumero()) {
+            for (int i = 0; i < this.yhdisteenNimi.length(); i++) {
+                if (onkoMerkkiKirjain(this.yhdisteenNimi.charAt(i))) {
+                    apu += this.yhdisteenNimi.charAt(i);
+                } else if (onkoMerkkiNumero(this.yhdisteenNimi.charAt(i))) {
+                    int kerroin = palautaKerroin(i);
+                    if (kuinkaMontaMerkkiaLuvussa(kerroin) > 1) {
+                        i += kuinkaMontaMerkkiaLuvussa(kerroin) - 1;
+                    }
+                    Alkuaine aa = tunnistaAlkuaine(apu);
+                    if (!onkoAlkuaineJoMolekyylikaavassa(aa)) {
+                        this.yhdisteenAlkuaineet.put(aa, kerroin);
+                    } else {
+                        lisaysKunAlkuaineOnJoYhdisteessa(aa, kerroin);
+                    }
+                    apu = "";
                 }
-                Alkuaine aa = tunnistaAlkuaine(apu);
-                if (!onkoAlkuaineJoMolekyylikaavassa(aa)) {
-                    this.yhdisteenAlkuaineet.put(aa, kerroin);
-                } else {
-                    lisaysKunAlkuaineOnJoYhdisteessa(aa, kerroin);
-                }
-                apu = "";
             }
         }
     }
-    
+
     /**
      * Metodi palauttaa kertoimen minkä käyttäjä on antanut alkuaineelle
-     * @param aloituspaikka kertoo mistä kohdasta merkkijonoa metodi alkaa tarkistamaan kerrointa
+     *
+     * @param aloituspaikka kertoo mistä kohdasta merkkijonoa metodi alkaa
+     * tarkistamaan kerrointa
      * @return palauttaa kertoimen suuruuden
      */
-    
     public int palautaKerroin(int aloituspaikka) {
         String kerroin = "";
         int laskuri = 0;
@@ -78,24 +78,26 @@ public class Yhdiste {
         }
         return Integer.parseInt(kerroin);
     }
-    
+
     /**
      * Metodi palauttaa tiedon kuinka monta merkkiä luku sisältää
-     * @param luku metodille annettava parametri, jonka sisältämien merkkien määrä selvitetään
+     *
+     * @param luku metodille annettava parametri, jonka sisältämien merkkien
+     * määrä selvitetään
      * @return palauttaa tiedon siitä kuinka monta merkkiä kerroin sisältää
      */
-    
     public int kuinkaMontaMerkkiaLuvussa(int luku) {
         String kuinkamontaMerkkiaKertoimessaMerkkijono = luku + "";
         return kuinkamontaMerkkiaKertoimessaMerkkijono.length();
     }
-    
+
     /**
      * Metodi palauttaa tiedon kuinka monta merkkiä luku sisältää
+     *
      * @param etsittava on merkkijono, joka etsitään alkuaineden joukosta
-     * @return palauttaa löydettyään halutun alkuaineen. Jos alkuainetta ei löydy, palautetaan tyhjä olio
+     * @return palauttaa löydettyään halutun alkuaineen. Jos alkuainetta ei
+     * löydy, palautetaan tyhjä olio
      */
-
     public Alkuaine tunnistaAlkuaine(String etsittava) {
         for (Alkuaine aa : this.alkuaineet) {
             if (etsittava.equals(aa.getLyhenne())) {
@@ -104,13 +106,13 @@ public class Yhdiste {
         }
         return null;
     }
-    
+
     /**
      * Metodi palauttaa tiedon onko merkki kirjain
+     *
      * @param c tarkasteltava merkki
      * @return palauttaa tiedon onko annettu merkki kirjain
      */
-
     public boolean onkoMerkkiKirjain(Character c) {
         if (Character.isLetter(c)) {
             return true;
@@ -118,13 +120,13 @@ public class Yhdiste {
             return false;
         }
     }
-    
+
     /**
      * Metodi palauttaa tiedon onko merkki numero
+     *
      * @param c tarkasteltava merkki
      * @return palauttaa tiedon onko annettu merkki numero
      */
-
     public boolean onkoMerkkiNumero(Character c) {
         if (Character.isDigit(c)) {
             return true;
@@ -132,13 +134,13 @@ public class Yhdiste {
             return false;
         }
     }
-    
+
     /**
      * Metodi palauttaa tiedon onko kyseinen alkuaine jo molekyylikaavassa
+     *
      * @param aa tarkasteltava alkuaine
      * @return palauttaa tiedon onko kyseinen alkuaine jo molekyylikaavassa
      */
-
     public boolean onkoAlkuaineJoMolekyylikaavassa(Alkuaine aa) {
         if (this.yhdisteenAlkuaineet.containsKey(aa)) {
             return true;
@@ -146,24 +148,23 @@ public class Yhdiste {
             return false;
         }
     }
-    
+
     /**
-     * Metodin avulla voidaan lisätä alkuaine yhdisteen alkuaineet sisältävään hajautustauluun
-     * jos se on jo aikaisemmin merkittynä.
+     * Metodin avulla voidaan lisätä alkuaine yhdisteen alkuaineet sisältävään
+     * hajautustauluun jos se on jo aikaisemmin merkittynä.
+     *
      * @param aa tarkasteltava alkuaine
      * @param lisakerroin kertoo alkuaineen stoikiometrisen kertoimen
-     */    
-
+     */
     public void lisaysKunAlkuaineOnJoYhdisteessa(Alkuaine aa, int lisakerroin) {
         int alkuKerroin = this.yhdisteenAlkuaineet.get(aa);
         this.yhdisteenAlkuaineet.remove(aa);
         this.yhdisteenAlkuaineet.put(aa, (lisakerroin + alkuKerroin));
     }
-    
+
     /**
      * Metodi laskee yhdisteen moolimassan
      */
-
     public void laskeMoolimassa() {
         Moolimassalaskuri mmLaskuri = new Moolimassalaskuri(this.yhdisteenAlkuaineet);
         this.moolimassa = mmLaskuri.palautaYhdisteenMassa();
@@ -180,4 +181,17 @@ public class Yhdiste {
         return yhdisteenAlkuaineet;
     }
     
+    /**
+     * Metodin avulla tarkistetaan onko yhdisteen ensimmäinen merkki numero
+     * @return palauttaa totuusarvon
+     */
+
+    public boolean onkoEnsimmainenMerkkiNumero() {
+        if (onkoMerkkiNumero(this.yhdisteenNimi.charAt(0))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

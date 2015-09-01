@@ -5,8 +5,6 @@ import javax.swing.*;
 import java.util.*;
 import java.lang.Object.*;
 
-// import statements
-
 /**
  * @author      Tuukka Kangas 
  * @version     1.0                 
@@ -20,15 +18,13 @@ import java.lang.Object.*;
 public class KlikkausKuuntelijaMuunnin implements ActionListener {
 
     private Yksikkomuunnin yksikkomuunnin;
-    private JButton nappi;
     private JTextField tekstikentta;
     private JTextField tuloskentta;
 
-    public KlikkausKuuntelijaMuunnin(Yksikkomuunnin yksikkomuunnin, JTextField tekstikentta, JTextField tuloskentta, JButton nappi) {
+    public KlikkausKuuntelijaMuunnin(Yksikkomuunnin yksikkomuunnin, JTextField tekstikentta, JTextField tuloskentta) {
         this.yksikkomuunnin = yksikkomuunnin;
         this.tekstikentta = tekstikentta;
         this.tuloskentta = tuloskentta;
-        this.nappi = nappi;
     }
     
     @Override

@@ -57,11 +57,11 @@ public class GraafinenYksikkomuunninTilavuus implements Runnable {
         JPanel panel2 = new JPanel(new GridLayout(1, 2));        
         
         JButton mlToLitraNappi = new JButton ("ml >> l");
-        mlToLitraNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(0.001, 0, "ml", "l"), this.vasen, this.oikea, mlToLitraNappi));
+        mlToLitraNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(0.001, 0, "ml", "l"), this.vasen, this.oikea));
         panel2.add(mlToLitraNappi);      
       
         JButton litraToMlNappi = new JButton ("l >> ml");
-        litraToMlNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1000, 0, "l", "ml"), this.vasen, this.oikea, litraToMlNappi));
+        litraToMlNappi.addActionListener(new KlikkausKuuntelijaMuunnin(new Yksikkomuunnin(1000, 0, "l", "ml"), this.vasen, this.oikea));
         panel2.add(litraToMlNappi);
         
         c.add(panel2);

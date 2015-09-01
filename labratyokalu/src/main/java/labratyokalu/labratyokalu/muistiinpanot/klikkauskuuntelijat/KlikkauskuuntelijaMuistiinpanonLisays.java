@@ -24,11 +24,13 @@ public class KlikkauskuuntelijaMuistiinpanonLisays implements ActionListener {
     private MuistiinpanoVarasto muistiinpanoVarasto;
     private JTextField paivamaaraKentta;
     private JTextField muistiinpanoKentta;
+    private JFrame frame;
 
-    public KlikkauskuuntelijaMuistiinpanonLisays(MuistiinpanoVarasto muistiinpanoVarasto, JTextField paivamaaraKentta, JTextField muistiinpanoKentta) {
+    public KlikkauskuuntelijaMuistiinpanonLisays(MuistiinpanoVarasto muistiinpanoVarasto, JTextField paivamaaraKentta, JTextField muistiinpanoKentta, JFrame frame) {
         this.muistiinpanoVarasto = muistiinpanoVarasto;
         this.paivamaaraKentta = paivamaaraKentta;
         this.muistiinpanoKentta = muistiinpanoKentta;
+        this.frame = frame;
     }
 
     @Override
@@ -40,6 +42,7 @@ public class KlikkauskuuntelijaMuistiinpanonLisays implements ActionListener {
         } catch (Exception ex) {
             Logger.getLogger(KlikkauskuuntelijaMuistiinpanonLisays.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.frame.dispose();
     }
     
     /**

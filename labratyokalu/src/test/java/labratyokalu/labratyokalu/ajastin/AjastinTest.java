@@ -1,7 +1,6 @@
 
 package labratyokalu.labratyokalu.ajastin;
 
-import labratyokalu.labratyokalu.ajastin.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
