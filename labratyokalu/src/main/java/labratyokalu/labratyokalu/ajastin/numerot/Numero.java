@@ -2,6 +2,15 @@ package labratyokalu.labratyokalu.ajastin.numerot;
 
 import java.awt.*;
 
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-09-02
+ */
+/**
+ * Luokka luo abstraktin luokan Numero, jonka avulla voidaan piirtää erilaisia
+ * numeroita
+ */
 public abstract class Numero {
 
     private int alkuX;
@@ -15,19 +24,27 @@ public abstract class Numero {
         this.koko = koko;
         this.vari = vari;
     }
-    
+
     public int getAlkuX() {
         return this.alkuX;
     }
-    
+
     public int getAlkuY() {
         return this.alkuY;
     }
     
+    /**
+     * Palauttaa yhden neliön koon
+     */
+
     public int getKoko() {
         return this.koko;
     }
     
+    /**
+     * Abstrakti metodi, jonka piirretään luokan toteuttavien olioiden kuvio
+     */
+
     public abstract void piirra(Graphics graphics);
 
 }

@@ -1,6 +1,5 @@
 package labratyokalu.labratyokalu.yhdisteet;
 
-import labratyokalu.labratyokalu.yhdisteet.Alkuaine;
 import java.util.*;
 
 /**

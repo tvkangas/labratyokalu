@@ -50,6 +50,7 @@ public class GraafinenKiehumispistelaskuri implements Runnable {
        
         container.add(muuntoNappain);
         container.add(new JLabel("<html>Paineet on annettava samassa yksikössä. <br /><br /> Höyrynpaineita [J/mol] <br /> Vesi 406600.0 <br /> Butaani 210000.0 <br /> Asetoni 313000.0</html>"));
+        asetaNayttojenKaytettavyys();
     }
     
     private void alustaAputekstit(Container c) {
@@ -74,7 +75,12 @@ public class GraafinenKiehumispistelaskuri implements Runnable {
         apuPanel.add(this.alkukiehumispiste);
         apuPanel.add(this.hoyrynpaine);
         apuPanel.add(this.loppukiehumispiste);
+        
         c.add(apuPanel);
+    }
+    
+    private void asetaNayttojenKaytettavyys() {
+        this.loppukiehumispiste.setEnabled(false);
     }
 
 }

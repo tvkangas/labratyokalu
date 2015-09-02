@@ -189,8 +189,7 @@ public class Ajastin {
      */
     public void sekuntiKuluu() {
         this.sekunnit--;
-        if (onkoAjastinNolla()) {
-        } else {
+        if (!onkoAjastinNolla()) {
             if (onkoSekunnitAlleNolla()) {
                 this.sekunnit = 59;
                 this.minuutit--;
@@ -210,7 +209,7 @@ public class Ajastin {
     }
 
     /**
-     * Apumetodi, jonka tarkoituksena on korjata väärät ajat
+     * Apumetodi, jonka tarkoituksena on korjata käyttäjän antamat väärät ajat
      */
     public void korjaaAjat() {
         if (this.tunnit > 99) {

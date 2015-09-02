@@ -30,11 +30,16 @@ public class KlikkauskuuntelijaMuuntonappain implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        Kiehumispistelaskuri kpl = new Kiehumispistelaskuri(Double.parseDouble(this.alkupaine.getText()), Double.parseDouble(this.alkukiehumispiste.getText()),
-                Double.parseDouble(this.loppupaine.getText()), Double.parseDouble(this.hoyrynpaine.getText()));
-        
-        this.loppukiehumispiste.setText("" + kpl.laskeUusiKiehumispiste());
+    public void actionPerformed(ActionEvent ev) {
+        try {
+            Kiehumispistelaskuri kpl = new Kiehumispistelaskuri(Double.parseDouble(this.alkupaine.getText()), Double.parseDouble(this.alkukiehumispiste.getText()),
+                    Double.parseDouble(this.loppupaine.getText()), Double.parseDouble(this.hoyrynpaine.getText()));
+
+            this.loppukiehumispiste.setText("" + kpl.laskeUusiKiehumispiste());
+        } catch (NumberFormatException e) {
+            System.out.println("Ei onnistunut!");
+        }
+
     }
 
 }

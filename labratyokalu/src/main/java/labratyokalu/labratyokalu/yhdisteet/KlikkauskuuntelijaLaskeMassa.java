@@ -2,8 +2,6 @@ package labratyokalu.labratyokalu.yhdisteet;
 
 import java.awt.event.*;
 import javax.swing.*;
-import java.util.*;
-import java.lang.Object.*;
 
 /**
  * @author Tuukka Kangas
@@ -31,13 +29,21 @@ public class KlikkauskuuntelijaLaskeMassa implements ActionListener {
         try {
             this.yhdiste = new Yhdiste(yhdisteTeksti);
             if (this.yhdiste.getMoolimassa() == 0.0) {
-                this.massakentta.setText("Ei kelvollinen yhdiste");
+                tekstiEiKelvollinenYhdiste();
             } else {
                 this.massakentta.setText("" + this.yhdiste.getMoolimassa());
             }            
         } catch (NumberFormatException ei) {
-            this.tekstikentta.setText("Ei kelvollinen yhdiste");
+            tekstiEiKelvollinenYhdiste();
         }
+    }
+    
+    /**
+     * Asettaa halutun tekstin, jos annettu yhdiste ei ole kelvollinen
+     */
+    
+    public void tekstiEiKelvollinenYhdiste() {
+        this.massakentta.setText("Ei kelvollinen yhdiste");
     }
 
 }

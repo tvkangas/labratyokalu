@@ -6,8 +6,6 @@ import javax.swing.*;
 import java.util.*;
 import java.lang.Object.*;
 
-// import statements
-
 /**
  * @author      Tuukka Kangas 
  * @version     1.0                 

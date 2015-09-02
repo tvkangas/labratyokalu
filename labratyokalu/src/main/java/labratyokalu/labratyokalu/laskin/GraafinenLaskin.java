@@ -39,13 +39,6 @@ public class GraafinenLaskin implements Runnable {
         frame.setVisible(true);
         this.keski.requestFocus();
     }
-    
-    /**
-     * Metodi luo halutut komponentit käyttöliittymään
-     *
-     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
-     *
-     */
 
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(4, 1);
@@ -59,17 +52,9 @@ public class GraafinenLaskin implements Runnable {
 
     public JFrame getFrame() {
         return frame;
-    }
-    
-    /**
-     * Metodi luo kehykseen halutut toiminnot
-     *
-     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
-     * @param yla Tulostauluna käytetty tekstikenttä
-     * @param keski Syöttökenttänä käytetty tekstikenttä
-     */
+    }    
 
-    public void alustaNapit(Container container, JTextField yla, JTextField keski) {
+    private void alustaNapit(Container container, JTextField yla, JTextField keski) {
 
         JPanel panel1 = new JPanel(new GridLayout(1, 3));
         JButton plus = new JButton("+");

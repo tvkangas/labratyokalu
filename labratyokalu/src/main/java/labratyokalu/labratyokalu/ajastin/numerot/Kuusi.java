@@ -4,6 +4,16 @@ package labratyokalu.labratyokalu.ajastin.numerot;
 import java.awt.*;
 
 public class Kuusi extends Numero {
+    
+    /**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-09-02
+ */
+
+/**
+ * Luokka luo Numero luokan toteuttavan olion, joka piirtää numeron kuusi
+ */
 
     public Kuusi(int x, int y, int koko, Color vari) {
         super(x, y, koko, vari);

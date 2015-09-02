@@ -2,8 +2,6 @@ package labratyokalu.labratyokalu.yksikkomuunnin;
 
 import java.awt.event.*;
 import javax.swing.*;
-import java.util.*;
-import java.lang.Object.*;
 
 /**
  * @author      Tuukka Kangas 

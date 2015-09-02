@@ -2,10 +2,7 @@
 package labratyokalu.labratyokalu.paavalikko.klikkauskuuntelijat;
 
 import java.awt.event.*;
-import javax.swing.*;
 import labratyokalu.labratyokalu.laskin.*;
-
-// import statements
 
 /**
  * @author      Tuukka Kangas 

@@ -1,14 +1,23 @@
-
 package labratyokalu.labratyokalu.ajastin.numerot;
 
 import java.awt.*;
 
 public class Viisi extends Numero {
+
+    /**
+     * @author Tuukka Kangas
+     * @version 1.0
+     * @since 2015-09-02
+     */
+    /**
+     * Luokka luo Numero luokan toteuttavan olion, joka piirtää numeron
+     * viisi
+     */
     
     public Viisi(int x, int y, int koko, Color vari) {
         super(x, y, koko, vari);
     }
-    
+
     @Override
     public void piirra(Graphics graphics) {
         graphics.setColor(vari);
@@ -25,5 +34,5 @@ public class Viisi extends Numero {
         graphics.fillRect(2 * getKoko() + getAlkuX() + 2, 4 * getKoko() + getAlkuY() + 4, getKoko(), getKoko());
 
     }
-    
+
 }

@@ -4,10 +4,21 @@ import java.awt.*;
 
 public class Yhdeksan extends Numero {
 
+    /**
+     * @author Tuukka Kangas
+     * @version 1.0
+     * @since 2015-09-02
+     */
+    
+    /**
+     * Luokka luo Numero luokan toteuttavan olion, joka piirtää numeron
+     * yhdeksän
+     */
+    
     public Yhdeksan(int x, int y, int koko, Color vari) {
         super(x, y, koko, vari);
     }
-    
+
     @Override
     public void piirra(Graphics graphics) {
         graphics.setColor(vari);

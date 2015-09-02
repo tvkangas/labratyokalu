@@ -2,7 +2,6 @@
 package labratyokalu.labratyokalu.paavalikko;
 
 import java.awt.*;
-import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
@@ -10,12 +9,10 @@ import labratyokalu.labratyokalu.paavalikko.klikkauskuuntelijat.*;
 import labratyokalu.labratyokalu.muistiinpanot.MuistiinpanotPaavalikko;
 import labratyokalu.labratyokalu.laskin.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.*;
-import labratyokalu.labratyokalu.yhdisteet.Alkuaine;
 import labratyokalu.labratyokalu.yhdisteet.GraafinenMoolimassalaskuri;
 import labratyokalu.labratyokalu.ajastin.*;
 import labratyokalu.labratyokalu.kiehumispistelaskuri.GraafinenKiehumispistelaskuri;
 
-// import statements
 /**
  * @author Tuukka Kangas
  * @version 1.0
@@ -47,26 +44,12 @@ public class Paavalikko implements Runnable {
         frame.pack();
         frame.setVisible(true);        
     }
-    
-    /**
-     * Metodi luo halutut komponentit käyttöliittymään
-     *
-     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
-     *
-     */
-    
+        
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(1, 1);
         container.setLayout(layout);
         alustaValikkonappaimet(container);
-    }
-    
-    /**
-     * Apumetodi luo halutut valikkonapit käyttöliittymään
-     *
-     * @param container Piirrossa hyödynnetty säiliö, johon tallenetaan halutut asiat
-     *
-     */
+    }    
     
     private void alustaValikkonappaimet(Container container) {
         JPanel apupaneeli = new JPanel(new GridLayout(6, 1));

@@ -8,7 +8,6 @@ import java.text.*;
 import java.util.*;
 import javax.swing.*;
 
-// import statements
 /**
  * @author Tuukka Kangas
  * @version 1.0
@@ -78,10 +77,11 @@ public class GraafinenKayttoliittymaMuistiinpanojenTarkastelu implements Runnabl
         for (int i = 0; i < muistiinpanot.size(); i++) {
             JLabel mp = new JLabel(muistiinpanot.get(i).getJattopaiva() + " " + muistiinpanot.get(i).getMuistiinpano());
             JButton poistoNappi = new JButton("Poista");
-            poistoNappi.addActionListener(new KlikkauskuuntelijaMuistiinpanonPoisto(muistiinpanot.get(i), this.muistiinpanoVarasto));
+            poistoNappi.addActionListener(new KlikkauskuuntelijaMuistiinpanonPoisto(muistiinpanot.get(i), this.muistiinpanoVarasto, this.frame));
             container.add(mp);
             container.add(poistoNappi);
         }
     }
+   
 
 }

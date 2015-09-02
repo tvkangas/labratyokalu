@@ -2,7 +2,6 @@ package labratyokalu.labratyokalu.laskin;
 
 import java.text.*;
 
-// import statements
 /**
  * @author Tuukka Kangas
  * @version 1.0

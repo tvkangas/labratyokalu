@@ -1,8 +1,6 @@
 
 package labratyokalu.labratyokalu.yhdisteet;
 
-// import statements
-
 /**
  * @author      Tuukka Kangas 
  * @version     1.0                 

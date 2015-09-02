@@ -2,6 +2,16 @@ package labratyokalu.labratyokalu.ajastin.numerot;
 
 import java.awt.*;
 
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-09-02
+ */
+
+/**
+ * Luokka luo Numero luokan toteuttavan olion, joka piirtää numeron kaksi
+ */
+
 public class Kaksi extends Numero {
 
     public Kaksi(int x, int y, int koko, Color vari) {

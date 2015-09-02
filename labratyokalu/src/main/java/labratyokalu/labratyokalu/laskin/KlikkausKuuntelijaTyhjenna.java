@@ -4,8 +4,6 @@ package labratyokalu.labratyokalu.laskin;
 import java.awt.event.*;
 import javax.swing.*;
 
-// import statements
-
 /**
  * @author      Tuukka Kangas 
  * @version     1.0                 

@@ -2,10 +2,8 @@ package labratyokalu.labratyokalu.yhdisteet;
 
 import labratyokalu.labratyokalu.yhdisteet.*;
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
-// import statements
 /**
  * @author Tuukka Kangas
  * @version 1.0

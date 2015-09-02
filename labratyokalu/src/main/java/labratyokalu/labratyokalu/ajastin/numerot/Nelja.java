@@ -1,14 +1,24 @@
-
 package labratyokalu.labratyokalu.ajastin.numerot;
 
 import java.awt.*;
 
 public class Nelja extends Numero {
+
+    /**
+     * @author Tuukka Kangas
+     * @version 1.0
+     * @since 2015-09-02
+     */
+    
+    /**
+     * Luokka luo Numero luokan toteuttavan olion, joka piirtää numeron
+     * neljä
+     */
     
     public Nelja(int x, int y, int koko, Color vari) {
         super(x, y, koko, vari);
     }
-    
+
     @Override
     public void piirra(Graphics graphics) {
         graphics.setColor(vari);
@@ -23,5 +33,5 @@ public class Nelja extends Numero {
         graphics.fillRect(2 * getKoko() + getAlkuX() + 2, 4 * getKoko() + getAlkuY() + 4, getKoko(), getKoko());
 
     }
-    
+
 }

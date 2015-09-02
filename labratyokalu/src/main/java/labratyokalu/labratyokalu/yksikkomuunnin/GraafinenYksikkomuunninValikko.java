@@ -4,10 +4,8 @@ package labratyokalu.labratyokalu.yksikkomuunnin;
 import labratyokalu.labratyokalu.yksikkomuunnin.yksikkomuuntimenPaavalikonKlikkauskuuntelijat.*;
 import labratyokalu.labratyokalu.yksikkomuunnin.muunnosluokat.*;
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
-// import statements
 /**
  * @author Tuukka Kangas
  * @version 1.0

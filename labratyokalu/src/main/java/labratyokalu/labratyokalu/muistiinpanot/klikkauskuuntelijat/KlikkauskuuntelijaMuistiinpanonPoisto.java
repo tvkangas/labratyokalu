@@ -1,4 +1,3 @@
-
 package labratyokalu.labratyokalu.muistiinpanot.klikkauskuuntelijat;
 
 import java.awt.event.*;
@@ -8,29 +7,26 @@ import java.util.logging.*;
 import javax.swing.*;
 import labratyokalu.labratyokalu.muistiinpanot.*;
 
-// import statements
-
 /**
- * @author      Tuukka Kangas 
- * @version     1.0                 
- * @since       2015-08-18          
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
  */
-
 /**
  * Luokka luo ActionListener-olion, jolla voidaan poistaa muistiinpano
  */
-
 public class KlikkauskuuntelijaMuistiinpanonPoisto implements ActionListener {
-    
+
     private Muistiinpano muistiinpano;
     private MuistiinpanoVarasto muistiinpanoVarasto;
+    private JFrame frame;
 
-    public KlikkauskuuntelijaMuistiinpanonPoisto(Muistiinpano muistiinpano, MuistiinpanoVarasto muistiinpanoVarasto) {
+    public KlikkauskuuntelijaMuistiinpanonPoisto(Muistiinpano muistiinpano, MuistiinpanoVarasto muistiinpanoVarasto, JFrame frame) {
         this.muistiinpano = muistiinpano;
         this.muistiinpanoVarasto = muistiinpanoVarasto;
+        this.frame = frame;
     }
 
-    
     @Override
     public void actionPerformed(ActionEvent ae) {
         this.muistiinpanoVarasto.poistaMuistiinpano(muistiinpano);
@@ -39,13 +35,13 @@ public class KlikkauskuuntelijaMuistiinpanonPoisto implements ActionListener {
         } catch (Exception ex) {
             Logger.getLogger(KlikkauskuuntelijaMuistiinpanonLisays.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.frame.dispose();
     }
-    
+
     /**
      * Metodi, joka päivittää muistiinpanoihin käytetyn tiedoston
      *
      */
-
     public void paivitaMuistiinpanotiedosto() throws Exception {
         ArrayList<Muistiinpano> apuLista = this.muistiinpanoVarasto.palautaMuistiinpanotListana();
         try (Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("src/main/java/labratyokalu/tiedostot/muistiinpanot.txt"), "UTF-8"))) {
@@ -54,5 +50,5 @@ public class KlikkauskuuntelijaMuistiinpanonPoisto implements ActionListener {
             }
         }
     }
-    
+
 }
