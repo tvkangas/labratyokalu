@@ -1,5 +1,10 @@
 package labratyokalu.labratyokalu.ajastin;
 
+import java.awt.*;
+import java.util.*;
+import labratyokalu.labratyokalu.ajastin.*;
+import labratyokalu.labratyokalu.ajastin.numerot.*;
+
 /**
  * @author Tuukka Kangas
  * @version 1.0
@@ -8,11 +13,6 @@ package labratyokalu.labratyokalu.ajastin;
 /**
  * Luokan tarkoituksena on luoda olio, joka koostuu Numero-olioista
  */
-import java.awt.*;
-import java.util.*;
-import labratyokalu.labratyokalu.ajastin.*;
-import labratyokalu.labratyokalu.ajastin.numerot.*;
-
 public class Numerosarja extends Numero {
 
     private ArrayList<Numero> numerot;
@@ -26,18 +26,18 @@ public class Numerosarja extends Numero {
 
     /**
      * Metodin avulla voidaan lisätä numero numerosarjaan
+     *
      * @param nro annettu numero
      */
-    
     public void lisaaNumero(Numero nro) {
         this.numerot.add(nro);
     }
-    
+
     /**
      * Metodin avulla voidaan piirtää numero
+     *
      * @param graphics kertoo, että kyseessä on piirrettävä olio
      */
-
     @Override
     public void piirra(Graphics graphics) {
         paivitaNumerot();
@@ -49,7 +49,6 @@ public class Numerosarja extends Numero {
     /**
      * Metodin avulla päivitetään numerot
      */
-    
     public void paivitaNumerot() {
         tyhjennaNumerot();
         int koko = 20;
@@ -63,11 +62,16 @@ public class Numerosarja extends Numero {
         lisaaNumero(muutaNumeroksi(this.ajastin.getSekunnitKymmenet(), 360, 20, koko, vari));
         lisaaNumero(muutaNumeroksi(this.ajastin.getSekunnitYkkoset(), 430, 20, koko, vari));
     }
-    
+
     /**
      * Metodi muuttaa numeron luvuksi
+     * @param luku kertoo mikä luku halutaan muuttaa
+     * @param x kertoo x-koordinaatin mihin piirretään ensimmäinen neliön
+     * @param y kertoo y-koordinaatin mihin piirretään ensimmäinen neliön
+     * @param koko kertoo yhden neliön koon
+     * @param vari kertoo minkä värisiä neliöiden tulee olla
+     * @return palauttaa piirrettävän numeron
      */
-
     public Numero muutaNumeroksi(int luku, int x, int y, int koko, Color vari) {
         if (luku == 1) {
             return new Yksi(x, y, koko, vari);
@@ -93,11 +97,10 @@ public class Numerosarja extends Numero {
             return null;
         }
     }
-    
+
     /**
      * Metodin avulla poistaa edelliset numerot pois listasta
      */
-
     public void tyhjennaNumerot() {
         this.numerot.clear();
     }

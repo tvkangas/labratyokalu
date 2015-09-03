@@ -54,6 +54,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tuntien kymmenet
+     * @return palauttaa tuntien kymmenet
      */
     public int getTunnitKymmenet() {
         if (this.tunnit < 10) {
@@ -65,6 +66,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tuntien ykköset
+     * @return palauttaa tuntien ykköset
      */
     public int getTunnitYkkoset() {
         if (this.tunnit < 10) {
@@ -76,6 +78,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa minuuttien kymmenet
+     * @return palauttaa minuuttien kymmenet
      */
     public int getMinuutitKymmenet() {
         if (this.minuutit < 10) {
@@ -87,6 +90,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa minuuttien ykköset
+     * @return palauttaa minuuttien ykköset
      */
     public int getMinuutitYkkoset() {
         if (this.minuutit < 10) {
@@ -98,6 +102,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa sekuntien kymmenet
+     * @return palauttaa sekuntien kymmenet
      */
     public int getSekunnitKymmenet() {
         if (this.sekunnit < 10) {
@@ -109,6 +114,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa sekuntien ykköset
+     * @return palauttaa sekuntien ykköset
      */
     public int getSekunnitYkkoset() {
         if (this.sekunnit < 10) {
@@ -120,6 +126,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tiedon onko tunnit nolla
+     * @return palauttaa true, jos tunnit on nolla, false muutoin
      */
     public boolean onkoTunnitNolla() {
         if (this.tunnit == 0) {
@@ -131,6 +138,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tiedon onko minuutit nolla
+     * @return palauttaa true, jos minuutit on nolla, false muutoin
      */
     public boolean onkoMinuutitNolla() {
         if (this.minuutit == 0) {
@@ -142,6 +150,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tiedon onko sekunnit nolla
+     * @return palauttaa true, jos sekunnit on nolla, false muutoin
      */
     public boolean onkoSekunnitNolla() {
         if (this.sekunnit == 0) {
@@ -153,6 +162,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tiedon onko ajastin nolla
+     * @return palauttaa true, jos ajastin on nolla, false muutoin
      */
     public boolean onkoAjastinNolla() {
         if (onkoTunnitNolla() && onkoMinuutitNolla() && onkoSekunnitNolla()) {
@@ -164,6 +174,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tiedon onko sekunnit alle nollan
+     * @return palauttaa true, jos sekunnit ovat alle nollan, false muutoin
      */
     public boolean onkoSekunnitAlleNolla() {
         if (this.sekunnit < 0) {
@@ -175,6 +186,7 @@ public class Ajastin {
 
     /**
      * Metodi palauttaa tiedon onko minuutit alle nollan
+     * @return palauttaa true, jos tunnit §ovat alle nollan, false muutoin
      */
     public boolean onkoMinuutitAlleNolla() {
         if (this.minuutit < 0) {

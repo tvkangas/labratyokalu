@@ -60,6 +60,9 @@ public class MuistiinpanotPaavalikko implements Runnable {
 
     /**
      * Metodi, joka lukee tallennetut muistiinpanot
+     * 
+     * @throws Exception heittää virheen, jos ei onnistu
+     *
      *
      * @return apuVarasto joka palauttaa konstruktorille luetuista
      * muistiinpanoista koostuvan listan

@@ -1,24 +1,21 @@
-
 package labratyokalu.labratyokalu.ajastin.numerot;
 
 import java.awt.*;
 
-public class Kuusi extends Numero {
-    
-    /**
+/**
  * @author Tuukka Kangas
  * @version 1.0
  * @since 2015-09-02
  */
-
 /**
  * Luokka luo Numero luokan toteuttavan olion, joka piirtää numeron kuusi
  */
+public class Kuusi extends Numero {
 
     public Kuusi(int x, int y, int koko, Color vari) {
         super(x, y, koko, vari);
     }
-    
+
     @Override
     public void piirra(Graphics graphics) {
         graphics.setColor(vari);

@@ -35,6 +35,7 @@ public abstract class Numero {
     
     /**
      * Palauttaa yhden neliön koon
+     * @return palauttaa koon
      */
 
     public int getKoko() {
@@ -43,6 +44,7 @@ public abstract class Numero {
     
     /**
      * Abstrakti metodi, jonka piirretään luokan toteuttavien olioiden kuvio
+     * @param graphics kertoo, että kyseessä on piirrettävä olio
      */
 
     public abstract void piirra(Graphics graphics);

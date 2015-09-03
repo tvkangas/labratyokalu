@@ -1,5 +1,15 @@
 package labratyokalu.labratyokalu.yksikkomuunnin;
 
+/**
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
+ */
+/**
+ * Luokka luo Yksikkömuunnin-olioita, joiden avulla voidaan suorittaa
+ * yksikkömuunnoksia sekä kertoimilla että vakiotermein
+ */
+
 public class Yksikkomuunnin {
 
     double kerroin;
@@ -7,15 +17,6 @@ public class Yksikkomuunnin {
     String mista;
     String mihin;
 
-    /**
-     * @author Tuukka Kangas
-     * @version 1.0
-     * @since 2015-08-18
-     */
-    /**
-     * Luokka luo Yksikkömuunnin-olioita, joiden avulla voidaan suorittaa
-     * yksikkömuunnoksia sekä kertoimilla että vakiotermein
-     */
     public Yksikkomuunnin(double k, double vk, String mista, String mihin) {
         this.kerroin = k;
         this.vakiotermi = vk;
@@ -25,6 +26,7 @@ public class Yksikkomuunnin {
 
     /**
      * Metodi muuntaa luvun annettujen oliomuuttujien mukaan
+     *
      * @param muunnettava metodi saa parametrin arvona muunnettava luvun
      * @return palauttaa muunnetun luvun
      */

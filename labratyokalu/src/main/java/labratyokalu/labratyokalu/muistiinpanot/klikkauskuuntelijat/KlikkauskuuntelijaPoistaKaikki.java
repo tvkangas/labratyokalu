@@ -38,6 +38,7 @@ public class KlikkauskuuntelijaPoistaKaikki implements ActionListener {
 
     /**
      * Metodi, joka päivittää muistiinpanoihin käytetyn tiedoston
+     * @throws Exception heittää virheen, jos ei onnistu
      *
      */
     public void paivitaMuistiinpanotiedosto() throws Exception {

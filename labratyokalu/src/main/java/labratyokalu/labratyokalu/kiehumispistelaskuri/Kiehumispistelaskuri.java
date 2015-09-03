@@ -39,7 +39,7 @@ public class Kiehumispistelaskuri {
 
     /**
      * Metodi palauttaa luvun luonnollisen logaritmin
-     *
+     * @param luku luku, jonka logaritmi etsitään
      * @return luonnollinen logaritmi
      */
     public double palautaLuonnollinenLogaritmi(double luku) {
