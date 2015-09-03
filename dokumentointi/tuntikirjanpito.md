@@ -21,4 +21,5 @@
 26. elokuuta, 1 tunti, ajastin
 27. elokuuta, 2 tuntia, ajastin + testejä
 1. syyskuuta, 2,5 tuntia, kiehumispistelaskuri + dokumentaatiota
-2. syyskuuta, 2 tuntia projektin viimeistelyä
+2. syyskuuta, 2 tuntia, projektin viimeistelyä
+3. syyskuuta, 4 tuntia, projektin viimeistelyä
