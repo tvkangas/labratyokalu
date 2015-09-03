@@ -1,26 +1,25 @@
-
 package labratyokalu.labratyokalu.yhdisteet;
-import java.io.File;
+
+import java.io.*;
 import java.util.*;
 
 /**
- * @author      Tuukka Kangas 
- * @version     1.0                 
- * @since       2015-08-18          
+ * @author Tuukka Kangas
+ * @version 1.0
+ * @since 2015-08-18
  */
-
 /**
  * Luokka luo olion, jolla voidaan lukea alkuaineet tiedostosta
  */
-
 public class AlkuaineidenLuku {
-    
+
     public ArrayList<Alkuaine> alustaAlkuaineet() throws Exception {
         ArrayList<Alkuaine> apuLista = new ArrayList();
-        File tiedosto = new File("src/main/java/labratyokalu/tiedostot/alkuaineet.txt");
-        Scanner skanneri = new Scanner(tiedosto, "UTF-8");
-        while (skanneri.hasNextLine()) {
-            Scanner apu = new Scanner(skanneri.nextLine());
+        InputStream in = getClass().getResourceAsStream("/alkuaineet.txt");
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+        String rivi = null;
+        while ((rivi = br.readLine()) != null) {
+            Scanner apu = new Scanner(rivi);
             apu.useDelimiter(";");
             int jarjluku = Integer.parseInt(apu.next());
             String nimi = apu.next();
@@ -32,9 +31,9 @@ public class AlkuaineidenLuku {
             double tiheys = Double.parseDouble(apu.next());
             apuLista.add(new Alkuaine(jarjluku, nimi, lyhenne, massa, tiheys));
         }
-        skanneri.close();
-        
-        return apuLista;        
+        br.close();
+
+        return apuLista;
     }
-    
+
 }

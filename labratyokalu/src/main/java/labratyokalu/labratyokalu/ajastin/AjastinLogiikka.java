@@ -3,20 +3,20 @@ package labratyokalu.labratyokalu.ajastin;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.net.*;
 import javax.swing.*;
 import javafx.scene.media.*;
 import javax.sound.sampled.*;
+import sun.audio.*;
 
 /**
  * @author Tuukka Kangas
  * @version 1.0
  * @since 2015-08-27
  */
-
 /**
  * Luokka luo olion, jonka avulla voidaan kontrolloida ajastimen toimintaa
  */
-
 public class AjastinLogiikka implements ActionListener {
 
     private Ajastin ajastin;
@@ -40,6 +40,7 @@ public class AjastinLogiikka implements ActionListener {
 
     /**
      * Metodi käynnistää vähentää ajastimesta sekunnin 1000 ms välein
+     *
      * @param e avulla voidaan päätellä mikä on aiheuttanut tapahtuman
      */
     @Override
@@ -53,20 +54,20 @@ public class AjastinLogiikka implements ActionListener {
             }
         }
     }
-    
+
     /**
      * Metodin avulla voidaan soittaa hälytysääni
      */
-
     public void soitaAani() {
         try {
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/main/java/labratyokalu/tiedostot/halytysaani.wav").getAbsoluteFile());
-            Clip aani = AudioSystem.getClip();
-            aani.open(audioInputStream);
-            aani.start();
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(getClass().getResource("/halytysaani.wav"));
+            Clip clip = AudioSystem.getClip();
+            clip.open(inputStream);
+            clip.start();
         } catch (Exception ex) {
             System.out.println("Virhe.");
         }
+
     }
 
 }

@@ -67,15 +67,20 @@ public class MuistiinpanotPaavalikko implements Runnable {
      */
     public MuistiinpanoVarasto luoMuistiinpanoVarasto() throws Exception {
         MuistiinpanoVarasto apuVarasto = new MuistiinpanoVarasto();
-        File tiedosto = new File("src/main/java/labratyokalu/tiedostot/muistiinpanot.txt");
-        Scanner skanneri = new Scanner(tiedosto, "UTF-8");
-        while (skanneri.hasNextLine()) {
-            Scanner apu = new Scanner(skanneri.nextLine());
+        InputStream in = getClass().getResourceAsStream("/muistiinpanot.txt");
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+        String rivi = null;
+        while ((rivi = br.readLine()) != null) {
+            if (rivi.length() == 0) {
+                break;
+            }
+            Scanner apu = new Scanner(rivi);
             apu.useDelimiter(";");
             String mp = apu.next();
             String jattopaiva = apu.next();
             apuVarasto.lisaaMuistiinpano(new Muistiinpano(mp, jattopaiva));
         }
+        br.close();
         return apuVarasto;
     }
 }

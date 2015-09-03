@@ -62,7 +62,7 @@ public class GraafinenKayttoliittymaMuistiinpanonLisays implements Runnable {
         container.add(paivamaaraKentta);
         container.add(muistiinpanoTeksti);
         container.add(muistiinpanoKentta);
-        container.add(new JLabel(""));
+        container.add(new JLabel("<html>Huomioi, että skandinaaviset aakkoset <br /> eivät toimi</html>"));
         container.add(tallennusNappi);
     }
     

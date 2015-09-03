@@ -49,9 +49,14 @@ public class KlikkauskuuntelijaMuistiinpanonLisays implements ActionListener {
      */
     public void paivitaMuistiinpanotiedosto() throws Exception {
         ArrayList<Muistiinpano> apuLista = this.muistiinpanoVarasto.palautaMuistiinpanotListana();
-        try (Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("src/main/java/labratyokalu/tiedostot/muistiinpanot.txt"), "UTF-8"))) {
+        String path = System.getProperty("user.home") + File.separator + "labratyokalu" + File.separator + "muistiinpanot.txt";
+        File muistiinpanot = new File(path);
+
+        try (BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path), "UTF-8"))) {
             for (int i = 0; i < this.muistiinpanoVarasto.palautaMuistiinpanoVarastonKoko(); i++) {
-                out.write(apuLista.get(i).getMuistiinpano() + ";" + apuLista.get(i).getJattopaiva() + "\n");
+                String teksti = apuLista.get(i).getMuistiinpano() + ";" + apuLista.get(i).getJattopaiva();
+                out.write(teksti);
+                out.newLine();
             }
         }
     }
